@@ -66,3 +66,17 @@ Stop to pause
 
 Reset to clear timer
 
+ #Home page 
+ 
+ User Profile 
+
+ User Experiance 
+
+ user Description 
+
+ #Contact Page
+
+ Enter name,mail,Number
+
+ press the submit button The details are going to the developer
+
