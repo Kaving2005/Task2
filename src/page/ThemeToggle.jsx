@@ -6,7 +6,7 @@ const ThemeToggle = ({ mode, setMode }) => {
     setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
   };
 
-  // You can replace these image URLs with your own bulb icons (local or hosted)
+ 
   const bulbOn = "https://cdn-icons-png.flaticon.com/512/702/702797.png";   // bulb on (light)
   const bulbOff = "https://cdn-icons-png.flaticon.com/512/702/702814.png"; // bulb off (dark)
 

@@ -4,7 +4,7 @@ import { Box, Button, Typography, Stack, Paper, Divider } from "@mui/material";
 const TimerSection = () => {
   const [seconds, setSeconds] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
-  const [history, setHistory] = useState([]); // 🕓 Store history of start/stop times
+  const [history, setHistory] = useState([]); 
   const intervalRef = useRef(null);
 
   // Format time as mm:ss
@@ -16,13 +16,13 @@ const TimerSection = () => {
     return `${minutes}:${seconds}`;
   };
 
-  // 🕒 Format current time (HH:MM:SS)
+  //  Format current time (HH:MM:SS)
   const getCurrentTime = () => {
     const now = new Date();
     return now.toLocaleTimeString();
   };
 
-  // ✅ Start timer
+  //  Start timer
   const handleStart = useCallback(() => {
     if (!isRunning) {
       setIsRunning(true);
@@ -33,7 +33,7 @@ const TimerSection = () => {
     }
   }, [isRunning]);
 
-  // ✅ Stop timer
+  //  Stop timer
   const handleStop = useCallback(() => {
     if (isRunning) {
       setIsRunning(false);
@@ -44,14 +44,14 @@ const TimerSection = () => {
     }
   }, [isRunning]);
 
-  // ✅ Reset timer
+  //  Reset timer
   const handleReset = useCallback(() => {
     setSeconds(0);
     setIsRunning(false);
     setHistory([]); // Clear history on reset
   }, []);
 
-  // ✅ Effect to manage timer logic with cleanup
+  //  Effect to manage timer logic with cleanup
   useEffect(() => {
     if (isRunning) {
       intervalRef.current = setInterval(() => {
@@ -127,7 +127,7 @@ const TimerSection = () => {
         </Stack>
       </Paper>
 
-      {/* 🧾 Timer History Section */}
+      {/*  Timer History Section */}
       {history.length > 0 && (
         <Paper
           elevation={2}

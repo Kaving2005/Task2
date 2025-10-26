@@ -44,10 +44,7 @@ function Navbar() {
     [mode]
   );
 
-  // 🌌 Background videos
-  // const lightBg = "../assets/light-bg.mp4"; // example: day sky, clouds, etc.
-  // const darkBg = "../assets/dark-bg.mp4";  // example: stars, space, etc.
-
+ 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -60,7 +57,7 @@ function Navbar() {
           overflow: "hidden",
         }}
       >
-        {/* 🎥 Animated Background */}
+        {/* Animated Background */}
         <AnimatePresence mode="wait">
           
           <motion.video
@@ -151,7 +148,7 @@ function Navbar() {
           </AppBar>
         </motion.div>
 
-        {/* 🔄 Main Content */}
+        {/*  Main Content */}
         <Box sx={{ flex: 1, p: 3, textAlign: "center", color: theme.palette.text.primary }}>
           <AnimatePresence mode="wait">
             {activeSection === "home" && (
@@ -203,7 +200,7 @@ function Navbar() {
           </AnimatePresence>
         </Box>
 
-        {/* 🌙 Footer */}
+        {/*  Footer */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

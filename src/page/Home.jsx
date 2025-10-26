@@ -112,7 +112,7 @@ const Home = ({ setActiveSection }) => {
           </Stack>
         </Stack>
       </Paper>
-    </Box>
+      </Box>
   );
 };
 
