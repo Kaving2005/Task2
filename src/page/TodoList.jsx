@@ -8,7 +8,7 @@ const TodoList = () => {
   });
 
   const [input, setInput] = useState('');
-  const [search, setSearch] = useState(''); // ✅ new state for search filter
+  const [search, setSearch] = useState(''); //  new state for search filter
   const inputRef = useRef(null);
 
   useEffect(() => {
