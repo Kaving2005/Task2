@@ -16,9 +16,14 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_449no5z", "template_r7wq61g", form.current, {
-        publicKey: "bJ2EYabFe9S73A1PK",
-      })
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
           console.log("SUCCESS!");
@@ -39,7 +44,6 @@ const Contact = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        
       }}
     >
       <Paper
@@ -99,6 +103,7 @@ const Contact = () => {
               fullWidth
               required
             />
+
             <Button
               type="submit"
               variant="contained"
